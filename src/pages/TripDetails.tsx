@@ -2,6 +2,13 @@ import { useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import { useState } from "react";
+import k1 from "@/assets/trips/kedarnath/k1.png";
+import k2 from "@/assets/trips/kedarnath/k2.png";
+import k3 from "@/assets/trips/kedarnath/k3.png";
+
+import m1 from "@/assets/trips/meghalaya/m1.jpg";
+import m2 from "@/assets/trips/meghalaya/m2.jpg";
+import m3 from "@/assets/trips/meghalaya/m3.jpg";
 
 const tripData: any = {
 
@@ -11,9 +18,7 @@ price:"₹12,999",
 duration:"5 Days",
 hero:"https://images.unsplash.com/photo-1626621331169-5f34be280ed9?w=1200",
 gallery:[
-"https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=800",
-"https://images.unsplash.com/photo-1616363088386-31c4a8414858?w=800",
-"https://images.unsplash.com/photo-1593181629936-11c609b8db9b?w=800"
+k1, k2, k3
 ],
 itinerary:[
 "Day 1: Haridwar → Guptkashi",
@@ -30,9 +35,7 @@ price:"₹18,499",
 duration:"6 Days",
 hero:"https://images.unsplash.com/photo-1600804340584-c7db2eacf0bf?w=1200",
 gallery:[
-"https://images.unsplash.com/photo-1558980664-10e7170c8a7e?w=800",
-"https://images.unsplash.com/photo-1622194993926-4db8a0b59f9c?w=800",
-"https://images.unsplash.com/photo-1622308644420-76f15ca4f2de?w=800"
+m1, m2, m3
 ],
 itinerary:[
 "Day 1: Arrive Guwahati → Shillong",
