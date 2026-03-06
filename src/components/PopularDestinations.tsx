@@ -3,6 +3,10 @@ import { MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import k2 from "@/assets/trips/kedarnath/k2.png";
 import m2 from "@/assets/trips/meghalaya/m2.jpeg";
+import s2 from "@/assets/trips/spiti/s2.jpg";
+import v2 from "@/assets/trips/varanasi/v2.jpg";
+import g1 from "@/assets/trips/gangtok/g1.jpg";
+import l3 from "@/assets/trips/ladakh/l3.jpg";
 
 
 const destinations = [
@@ -25,28 +29,28 @@ const destinations = [
     name: "Spiti Valley",
     description: "Remote Himalayan desert with ancient monasteries",
     image:
-      "https://images.unsplash.com/photo-1626621338750-10f1e486d3c8?w=600&q=80",
+     s2,
   },
   {
     id: "varanasi",
     name: "Varanasi",
     description: "Spiritual heart of India on the banks of the Ganges",
     image:
-      "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=600&q=80",
+     v2,
   },
   {
     id: "gangtok",
     name: "Gangtok",
     description: "Gateway to stunning Sikkim with Kanchenjunga views",
     image:
-      "https://images.unsplash.com/photo-1622308644420-76f15ca4f2de?w=600&q=80",
+   g1,
   },
   {
     id: "ladakh",
     name: "Ladakh",
     description: "The land of high passes and pristine mountain lakes",
     image:
-      "https://images.unsplash.com/photo-1626015365107-aa93bbe9f82f?w=600&q=80",
+      l3,
   },
 ];
 

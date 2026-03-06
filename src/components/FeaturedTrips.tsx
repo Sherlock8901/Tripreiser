@@ -3,8 +3,10 @@ import { Clock, Mountain } from "lucide-react";
 import { Link } from "react-router-dom";
 import k1 from "@/assets/trips/kedarnath/k1.png";
 import m2 from "@/assets/trips/meghalaya/m2.jpeg";
-// import k2 from "@/assets/trips/kedarnath/k2.png";
-// import k3 from "@/assets/trips/kedarnath/k3.png";
+import s1 from "@/assets/trips/spiti/s1.png";
+import v3 from "@/assets/trips/varanasi/v3.jpg";
+import g1 from "@/assets/trips/gangtok/g1.jpg";
+import l3 from "@/assets/trips/ladakh/l3.jpg";
 
 const trips = [
   {
@@ -26,7 +28,7 @@ const trips = [
   {
     id: "spiti",
     title: "Spiti Valley Bike Expedition",
-    image: "https://images.unsplash.com/photo-1626621338750-10f1e486d3c8?w=500&q=80",
+    image: s1,
     duration: "8 Days",
     price: "₹22,999",
     difficulty: "Hard",
@@ -34,7 +36,7 @@ const trips = [
   {
     id: "varanasi",
     title: "Dev Diwali Varanasi Experience",
-    image: "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=500&q=80",
+    image: v3,
     duration: "4 Days",
     price: "₹9,999",
     difficulty: "Easy",
@@ -42,7 +44,15 @@ const trips = [
   {
     id: "gangtok",
     title: "Gangtok Bike Trip",
-    image: "https://images.unsplash.com/photo-1622308644420-76f15ca4f2de?w=500&q=80",
+    image: g1,
+    duration: "7 Days",
+    price: "₹19,999",
+    difficulty: "Moderate",
+  },
+    {
+    id: "ladakh",
+    title: "Ladakh Bike Pro Trip",
+    image: l3,
     duration: "7 Days",
     price: "₹19,999",
     difficulty: "Moderate",

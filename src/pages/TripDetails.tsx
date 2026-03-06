@@ -10,6 +10,22 @@ import m1 from "@/assets/trips/meghalaya/m1.jpeg";
 import m2 from "@/assets/trips/meghalaya/m2.jpeg";
 import m3 from "@/assets/trips/meghalaya/m3.jpeg";
 
+import s1 from "@/assets/trips/spiti/s1.png";
+import s2 from "@/assets/trips/spiti/s2.jpg";
+import s3 from "@/assets/trips/spiti/s3.jpg";
+
+import v1 from "@/assets/trips/varanasi/v1.jpg";
+import v2 from "@/assets/trips/varanasi/v2.jpg";
+import v3 from "@/assets/trips/varanasi/v3.jpg";
+
+import g1 from "@/assets/trips/gangtok/g1.jpg";
+import g2 from "@/assets/trips/gangtok/g2.jpg";
+import g3 from "@/assets/trips/gangtok/g3.jpg";
+
+import l1 from "@/assets/trips/ladakh/l1.jpg";
+import l2 from "@/assets/trips/ladakh/l2.jpg";
+import l3 from "@/assets/trips/ladakh/l3.jpg";
+
 const tripData: any = {
 
 kedarnath:{
@@ -47,11 +63,9 @@ spiti:{
 title:"Spiti Valley Bike Expedition",
 price:"₹22,999",
 duration:"8 Days",
-hero:"https://images.unsplash.com/photo-1626621338750-10f1e486d3c8?w=1200",
+hero:s1,
 gallery:[
-"https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800",
-"https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800",
-"https://images.unsplash.com/photo-1589308078055-832c1a2d1d79?w=800"
+s1, s2, s3
 ],
 itinerary:[
 "Day 1: Manali arrival",
@@ -69,11 +83,9 @@ varanasi:{
 title:"Dev Diwali Varanasi Experience",
 price:"₹9,999",
 duration:"4 Days",
-hero:"https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=1200",
+hero:v1,
 gallery:[
-"https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=800",
-"https://images.unsplash.com/photo-1594818379496-da1e3459b2c0?w=800",
-"https://images.unsplash.com/photo-1609766856923-7d0d63d26c56?w=800"
+v1, v2, v3
 ],
 itinerary:[
 "Day 1: Arrival in Varanasi",
@@ -87,11 +99,9 @@ gangtok:{
 title:"Gangtok Bike Trip",
 price:"₹19,999",
 duration:"7 Days",
-hero:"https://images.unsplash.com/photo-1622308644420-76f15ca4f2de?w=1200",
+hero:g1,
 gallery:[
-"https://images.unsplash.com/photo-1622308644420-76f15ca4f2de?w=800",
-"https://images.unsplash.com/photo-1593691509543-c55fb32a6d0d?w=800",
-"https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800"
+g1, g2, g3
 ],
 itinerary:[
 "Day 1: Arrival in Siliguri",
@@ -108,11 +118,9 @@ ladakh:{
 title:"Ladakh Adventure Expedition",
 price:"₹24,999",
 duration:"8 Days",
-hero:"https://images.unsplash.com/photo-1626015365107-aa93bbe9f82f?w=1200",
+hero:l1,
 gallery:[
-"https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800",
-"https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800",
-"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800"
+l1, l2, l3
 ],
 itinerary:[
 "Day 1: Arrival in Leh",

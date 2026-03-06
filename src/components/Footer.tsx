@@ -1,4 +1,5 @@
 import { Mountain, Phone, Mail, MapPin } from "lucide-react";
+import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
@@ -6,12 +7,17 @@ const Footer = () => {
       <div className="container-wide">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <Mountain className="h-6 w-6 text-secondary" />
-              <span className="font-heading font-extrabold text-lg text-primary-foreground">
-                Trip<span className="text-secondary">Reiser</span>
-              </span>
-            </div>
+          <div className="flex items-center gap-2 mb-4">
+          <img 
+          src={logo} 
+          alt="TripReiser Logo" 
+          className="h-8 w-auto"
+          />
+
+          <span className="font-heading font-extrabold text-lg text-primary-foreground">
+          Trip<span className="text-secondary">Reiser</span>
+          </span>
+           </div>
             <p className="text-primary-foreground/60 text-sm font-body leading-relaxed">
               Curated group trips, adventure tours, and unforgettable journeys across India.
             </p>
