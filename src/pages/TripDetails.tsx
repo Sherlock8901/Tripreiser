@@ -6,9 +6,9 @@ import k1 from "@/assets/trips/kedarnath/k1.png";
 import k2 from "@/assets/trips/kedarnath/k2.png";
 import k3 from "@/assets/trips/kedarnath/k3.png";
 
-import m1 from "@/assets/trips/meghalaya/m1.jpg";
-import m2 from "@/assets/trips/meghalaya/m2.jpg";
-import m3 from "@/assets/trips/meghalaya/m3.jpg";
+import m1 from "@/assets/trips/meghalaya/m1.jpeg";
+import m2 from "@/assets/trips/meghalaya/m2.jpeg";
+import m3 from "@/assets/trips/meghalaya/m3.jpeg";
 
 const tripData: any = {
 
@@ -16,10 +16,8 @@ kedarnath:{
 title:"Kedarnath Spiritual Trek",
 price:"₹12,999",
 duration:"5 Days",
-hero:"https://images.unsplash.com/photo-1626621331169-5f34be280ed9?w=1200",
-gallery:[
-k1, k2, k3
-],
+hero:k1,
+gallery:[k1, k2, k3],
 itinerary:[
 "Day 1: Haridwar → Guptkashi",
 "Day 2: Trek from Gaurikund → Kedarnath",
@@ -33,10 +31,8 @@ meghalaya:{
 title:"Meghalaya Waterfalls Adventure",
 price:"₹18,499",
 duration:"6 Days",
-hero:"https://images.unsplash.com/photo-1600804340584-c7db2eacf0bf?w=1200",
-gallery:[
-m1, m2, m3
-],
+hero:m2,
+gallery: [m1, m2, m3],
 itinerary:[
 "Day 1: Arrive Guwahati → Shillong",
 "Day 2: Explore Cherrapunji waterfalls",

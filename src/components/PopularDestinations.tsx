@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import k2 from "@/assets/trips/kedarnath/k2.png";
+import m2 from "@/assets/trips/meghalaya/m2.jpeg";
+
 
 const destinations = [
   {
@@ -8,14 +11,14 @@ const destinations = [
     name: "Kedarnath",
     description: "Sacred Himalayan pilgrimage with breathtaking mountain views",
     image:
-      "https://images.unsplash.com/photo-1626621331169-5f34be280ed9?w=600&q=80",
+     k2,
   },
   {
     id: "meghalaya",
     name: "Meghalaya",
     description: "Living root bridges and stunning waterfalls in the clouds",
     image:
-      "https://images.unsplash.com/photo-1600804340584-c7db2eacf0bf?w=600&q=80",
+      m2,
   },
   {
     id: "spiti",

@@ -1,12 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Clock, Mountain } from "lucide-react";
 import { Link } from "react-router-dom";
+import k1 from "@/assets/trips/kedarnath/k1.png";
+import m2 from "@/assets/trips/meghalaya/m2.jpeg";
+// import k2 from "@/assets/trips/kedarnath/k2.png";
+// import k3 from "@/assets/trips/kedarnath/k3.png";
 
 const trips = [
   {
     id: "kedarnath",
     title: "Kedarnath Spiritual Trek",
-    image: "https://images.unsplash.com/photo-1626621331169-5f34be280ed9?w=500&q=80",
+    image: k1,
     duration: "5 Days",
     price: "₹12,999",
     difficulty: "Moderate",
@@ -14,7 +18,7 @@ const trips = [
   {
     id: "meghalaya",
     title: "Meghalaya Waterfalls Adventure",
-    image: "https://images.unsplash.com/photo-1600804340584-c7db2eacf0bf?w=500&q=80",
+    image: m2,
     duration: "6 Days",
     price: "₹18,499",
     difficulty: "Easy",
