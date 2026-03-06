@@ -1,6 +1,7 @@
 import { useState } from "react";
+import logo from "../assets/logo.png";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Mountain } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Destinations", href: "#destinations" },
@@ -17,12 +18,14 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md border-b border-primary-foreground/10">
       <div className="container-wide flex items-center justify-between h-16 px-4 lg:px-8">
-        <a href="/" className="flex items-center gap-2">
-          <Mountain className="h-7 w-7 text-secondary" />
-          <span className="font-heading font-extrabold text-xl text-primary-foreground tracking-tight">
-            Trip<span className="text-secondary">Reiser</span>
-          </span>
+     <a href="/" className="flex items-center gap-2">
+        <img src={logo} alt="TripReiser logo" className="h-8 w-auto" />
+        <span className="font-heading font-extrabold text-xl text-primary-foreground tracking-tight">
+         Trip<span className="text-secondary">Reiser</span>
+         </span>
         </a>
+
+        
 
         <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
