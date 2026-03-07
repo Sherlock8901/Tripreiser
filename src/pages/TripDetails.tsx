@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
-import { useState } from "react";
+
 import k1 from "@/assets/trips/kedarnath/k1.png";
 import k2 from "@/assets/trips/kedarnath/k2.png";
 import k3 from "@/assets/trips/kedarnath/k3.png";
@@ -26,6 +28,7 @@ import l1 from "@/assets/trips/ladakh/l1.jpg";
 import l2 from "@/assets/trips/ladakh/l2.jpg";
 import l3 from "@/assets/trips/ladakh/l3.jpg";
 
+
 const tripData: any = {
 
 kedarnath:{
@@ -33,7 +36,7 @@ title:"Kedarnath Spiritual Trek",
 price:"₹12,999",
 duration:"5 Days",
 hero:k1,
-gallery:[k1, k2, k3],
+gallery:[k1,k2,k3],
 itinerary:[
 "Day 1: Haridwar → Guptkashi",
 "Day 2: Trek from Gaurikund → Kedarnath",
@@ -48,7 +51,7 @@ title:"Meghalaya Waterfalls Adventure",
 price:"₹18,499",
 duration:"6 Days",
 hero:m2,
-gallery: [m1, m2, m3],
+gallery:[m1,m2,m3],
 itinerary:[
 "Day 1: Arrive Guwahati → Shillong",
 "Day 2: Explore Cherrapunji waterfalls",
@@ -64,9 +67,7 @@ title:"Spiti Valley Bike Expedition",
 price:"₹22,999",
 duration:"8 Days",
 hero:s1,
-gallery:[
-s1, s2, s3
-],
+gallery:[s1,s2,s3],
 itinerary:[
 "Day 1: Manali arrival",
 "Day 2: Manali → Kaza ride",
@@ -84,9 +85,7 @@ title:"Dev Diwali Varanasi Experience",
 price:"₹9,999",
 duration:"4 Days",
 hero:v1,
-gallery:[
-v1, v2, v3
-],
+gallery:[v1,v2,v3],
 itinerary:[
 "Day 1: Arrival in Varanasi",
 "Day 2: Sunrise boat ride on Ganges",
@@ -100,9 +99,7 @@ title:"Gangtok Bike Trip",
 price:"₹19,999",
 duration:"7 Days",
 hero:g1,
-gallery:[
-g1, g2, g3
-],
+gallery:[g1,g2,g3],
 itinerary:[
 "Day 1: Arrival in Siliguri",
 "Day 2: Ride to Gangtok",
@@ -119,9 +116,7 @@ title:"Ladakh Adventure Expedition",
 price:"₹24,999",
 duration:"8 Days",
 hero:l1,
-gallery:[
-l1, l2, l3
-],
+gallery:[l1,l2,l3],
 itinerary:[
 "Day 1: Arrival in Leh",
 "Day 2: Leh local sightseeing",
@@ -136,10 +131,11 @@ itinerary:[
 
 };
 
+
 const TripDetails = () => {
 
-const {id}=useParams();
-const trip=tripData[id as keyof typeof tripData];
+const { id } = useParams();
+const trip = tripData[id as keyof typeof tripData];
 
 const [name,setName]=useState("");
 const [phone,setPhone]=useState("");
@@ -147,11 +143,40 @@ const [people,setPeople]=useState("");
 
 if(!trip) return <h1 className="p-10">Trip not found</h1>;
 
+const sendEmail = (e:any) => {
+
+e.preventDefault();
+
+ const templateParams = {
+    trip: trip.title,
+    name: name,
+    phone: phone,
+    people: people
+  };
+
+emailjs.send(
+"service_828uzvj",
+"template_idkz19u",
+templateParams,
+"jPuWySnIP1_gBT7eL"
+).then(
+()=>{
+alert("Booking request sent successfully!");
+setName("");
+setPhone("");
+setPeople("");
+},
+(error)=>{
+alert("Failed to send booking request");
+console.log(error);
+}
+);
+
+};
+
 return(
 
 <div className="container mx-auto px-4 py-10">
-
-{/* HERO IMAGE */}
 
 <img
 src={trip.hero}
@@ -159,8 +184,6 @@ className="w-full h-[450px] object-cover rounded-xl mb-10"
 />
 
 <div className="grid lg:grid-cols-3 gap-10">
-
-{/* LEFT SECTION */}
 
 <div className="lg:col-span-2">
 
@@ -172,8 +195,6 @@ className="w-full h-[450px] object-cover rounded-xl mb-10"
 Duration: {trip.duration}
 </p>
 
-
-{/* GALLERY */}
 
 <h2 className="text-2xl font-bold mb-4">
 Trip Gallery
@@ -191,8 +212,6 @@ className="h-40 w-full object-cover rounded-lg hover:scale-105 transition"
 
 </div>
 
-
-{/* ITINERARY */}
 
 <h2 className="text-2xl font-bold mb-6">
 Itinerary
@@ -214,8 +233,6 @@ className="border p-4 rounded-lg bg-card"
 </div>
 
 
-{/* RIGHT SIDE BOOKING CARD */}
-
 <div className="bg-card p-6 rounded-xl shadow-lg h-fit sticky top-20">
 
 <h3 className="text-3xl font-bold mb-2">
@@ -227,17 +244,20 @@ Duration: {trip.duration}
 </p>
 
 
-{/* BOOK BUTTON */}
+<a
+href="https://forms.gle/VTCkR5123v3hihvK9"
+target="_blank"
+>
 
 <Button className="w-full mb-4">
 Book Now
 </Button>
 
+</a>
 
-{/* WHATSAPP BUTTON */}
 
 <a
-href="https://wa.me/919876543210"
+href="https://wa.me/917319216894"
 target="_blank"
 >
 
@@ -252,13 +272,11 @@ WhatsApp Booking
 </a>
 
 
-{/* BOOKING FORM */}
-
 <h3 className="text-xl font-bold mt-8 mb-4">
 Book This Trip
 </h3>
 
-<form className="space-y-3">
+<form className="space-y-3" onSubmit={sendEmail}>
 
 <input
 type="text"
@@ -288,9 +306,7 @@ className="w-full border rounded-lg p-3"
 type="submit"
 className="w-full bg-black text-white py-3 rounded-lg"
 >
-
 Send Booking Request
-
 </button>
 
 </form>
