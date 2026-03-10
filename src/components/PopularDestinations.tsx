@@ -60,7 +60,7 @@ const PopularDestinations = () => {
       <div className="container-wide">
         <div className="text-center mb-12">
           <p className="text-secondary font-heading font-semibold text-sm uppercase tracking-widest mb-2">
-            Discover India
+            Discover Northeast India
           </p>
 
           <h2 className="font-heading font-extrabold text-3xl md:text-5xl text-foreground">
